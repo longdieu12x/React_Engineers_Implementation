@@ -1,0 +1,23 @@
+{
+  "name": "React_Engineers_Implementation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/longdieu12x/React_Engineers_Implementation.git",
+  "author": "dang.pm.IT <longdieu12x@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^5.4.3"
+  },
+  "private": true,
+  "workspaces": {
+    "packages" : [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "scripts": {
+    "build": "yarn lerna run build"
+  }
+}
