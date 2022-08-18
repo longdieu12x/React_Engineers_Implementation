@@ -1,5 +1,5 @@
 {
-  "name": "React_Engineers_Implementation",
+  "name": "@ds.e",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/longdieu12x/React_Engineers_Implementation.git",
@@ -11,13 +11,15 @@
   "private": true,
   "workspaces": {
     "packages" : [
-      "packages/*"
+      "packages/*",
+      "playgrounds/*"
     ],
     "nohoist": [
       "**/normalize-scss"
     ]
   },
   "scripts": {
-    "build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev"
   }
 }
