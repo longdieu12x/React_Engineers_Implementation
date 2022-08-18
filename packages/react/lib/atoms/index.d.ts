@@ -1,2 +1,4 @@
 import Color from './Color';
-export { Color };
+import Text from './Text';
+import Margin from './Margin';
+export { Color, Text, Margin };

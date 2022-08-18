@@ -1,7 +1,9 @@
-import { Color } from "./atoms";
-import Spacing from "./foundation/Spacing";
+import { Color, Text, Margin } from "./atoms";
+import { Select } from "./molecules";
 
 export {
   Color,
-  Spacing
+  Text,
+  Margin,
+  Select
 }
