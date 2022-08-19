@@ -26,6 +26,9 @@ ReactDOM.render(
     <div style={{ padding: '40px' }}>
         <Select
            options={options}
+          //  renderOption={({ option, getOptionRecommendedProps }) => { 
+          //    return (<p {...{...getOptionRecommendedProps(), className: `${getOptionRecommendedProps()?.className} dse-margin-none`}} >{option.label}</p>); 
+          //   }}
          />
     </div>
   ),

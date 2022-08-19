@@ -39,12 +39,21 @@
     box-sizing: border-box;
   }
 
-  &__option:hover {
+  &__option--highlighted {
     background-color: $form-bg-color-hover;
   }
 
   &__option--selected {
     background: $form-bg-option-selected;
     color: $form-color-option-selected;
+  }
+  &__caret {
+    transition: all 250ms ease;
+    &--open {
+      transform: rotate(180deg);
+    }
+    &--close {
+      transform: rotate(0deg);
+    }
   }
 }

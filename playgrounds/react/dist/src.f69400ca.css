@@ -1325,13 +1325,25 @@ body {
   box-sizing: border-box;
 }
 
-.dse-select__option:hover {
+.dse-select__option--highlighted {
   background-color: var(--dse-form-bg-color-hover, #f1f2f3);
 }
 
 .dse-select__option--selected {
   background: var(--dse-form-bg-option-selected, #5ece7b);
   color: var(--dse-form-color-option-selected, #fff);
+}
+
+.dse-select__caret {
+  transition: all 250ms ease;
+}
+
+.dse-select__caret--open {
+  transform: rotate(180deg);
+}
+
+.dse-select__caret--close {
+  transform: rotate(0deg);
 }
 
 
