@@ -89,9 +89,9 @@ const Select = ({ options = [], label = 'Please select an option...', onOptionSe
         }
     };
     return (React.createElement("div", { className: 'dse-select' },
-        React.createElement("button", { onKeyDown: onButtonKeyDown, ref: labelRef, "aria-expanded": isOpen ? true : undefined, "aria-haspopup": true, "aria-controls": 'dse-select-list', className: 'dse-select__label', onClick: () => { onToggleList(); } },
+        React.createElement("button", { "data-testid": 'DseSelectButton', onKeyDown: onButtonKeyDown, ref: labelRef, "aria-expanded": isOpen ? true : undefined, "aria-haspopup": true, "aria-controls": 'dse-select-list', className: 'dse-select__label', onClick: () => { onToggleList(); } },
             React.createElement("span", null,
-                React.createElement(Text, null, selectedIndex === null ? label : selectedOption?.label || 'Please select an option...')),
+                React.createElement(Text, null, typeof selectedIndex !== 'number' ? label : selectedOption?.label || 'Please select an option...')),
             React.createElement("svg", { className: `dse-select__caret ${isOpen ? 'dse-select__caret--open' : 'dse-select__caret--close'}`, width: '1rem', height: '1rem', fill: "none", stroke: "currentColor", viewBox: "0 0 24 24", xmlns: "http://www.w3.org/2000/svg" },
                 React.createElement("path", { strokeLinecap: "round", strokeLinejoin: "round", strokeWidth: 2, d: "M19 9l-7 7-7-7" }))),
         isOpen && React.createElement("ul", { onKeyDown: onOptionKeyDown, id: 'dse-select-list', style: { top: overlayTop }, className: 'dse-select__overlay' }, options.map((option, index) => {

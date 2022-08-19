@@ -128,11 +128,11 @@ const Select: React.FC<SelectProps> = ({ options = [], label = 'Please select an
 
   return (
     <div className='dse-select'>
-      <button onKeyDown={onButtonKeyDown} ref={labelRef} aria-expanded={isOpen ? true: undefined}
+      <button data-testid='DseSelectButton' onKeyDown={onButtonKeyDown} ref={labelRef} aria-expanded={isOpen ? true: undefined}
       aria-haspopup={true} aria-controls='dse-select-list' className='dse-select__label' onClick={() => { onToggleList() }}>
         <span>
           <Text>
-            {selectedIndex === null ? label : selectedOption?.label || 'Please select an option...'}
+            {typeof selectedIndex !== 'number' ? label : selectedOption?.label || 'Please select an option...'}
           </Text>
         </span>
         <svg className={`dse-select__caret ${isOpen ? 'dse-select__caret--open' : 'dse-select__caret--close'}`} width='1rem' height='1rem' fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" /></svg>

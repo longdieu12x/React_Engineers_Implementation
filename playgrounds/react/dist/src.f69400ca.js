@@ -33385,6 +33385,7 @@ const Select = ({
   return _react.default.createElement("div", {
     className: 'dse-select'
   }, _react.default.createElement("button", {
+    "data-testid": 'DseSelectButton',
     onKeyDown: onButtonKeyDown,
     ref: labelRef,
     "aria-expanded": isOpen ? true : undefined,
@@ -33394,7 +33395,7 @@ const Select = ({
     onClick: () => {
       onToggleList();
     }
-  }, _react.default.createElement("span", null, _react.default.createElement(_index.default, null, selectedIndex === null ? label : selectedOption?.label || 'Please select an option...')), _react.default.createElement("svg", {
+  }, _react.default.createElement("span", null, _react.default.createElement(_index.default, null, typeof selectedIndex !== 'number' ? label : selectedOption?.label || 'Please select an option...')), _react.default.createElement("svg", {
     className: `dse-select__caret ${isOpen ? 'dse-select__caret--open' : 'dse-select__caret--close'}`,
     width: '1rem',
     height: '1rem',
@@ -33663,7 +33664,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51179" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61033" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

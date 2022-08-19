@@ -1,8 +1,8 @@
 declare const _default: Readonly<{
-    xs: "xs";
-    sm: "sm";
-    base: "base";
-    lg: "lg";
-    xl: "xl";
+    xs: string;
+    sm: string;
+    base: string;
+    lg: string;
+    xl: string;
 }>;
 export default _default;
