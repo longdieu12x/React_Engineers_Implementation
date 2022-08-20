@@ -9,22 +9,22 @@ const KEY_CODES = {
   UP_ARROW: 38
 }
 
-interface SelectOption {
+export interface SelectOption {
   label: string;
   value: string;
 }
 
-interface OptionRecommendedPropsReturn {
+export interface OptionRecommendedPropsReturn {
   className: string;
   key: string;
   onClick?: () => void
 }
-interface RenderOptionProps {
+export interface RenderOptionProps {
   isSelected: boolean;
   option: SelectOption;
   getOptionRecommendedProps: (overrideProps?: Object) => OptionRecommendedPropsReturn
 }
-interface SelectProps {
+export interface SelectProps {
   onOptionSelected?: (option: SelectOption, optionIndex: number) => void
   options?: SelectOption[];
   label?: string;

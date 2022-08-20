@@ -12,7 +12,8 @@
       "noUnusedLocals": true,
       "noUnusedParameters": true,
       "declaration": true,
-      "moduleResolution": "node"
+      "moduleResolution": "node",
+      "strictBindCallApply": true
     },
     "include": ["src"],
     "exclude": ["node_modules", "lib"]
