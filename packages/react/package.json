@@ -43,5 +43,7 @@
     "build-storybook": "build-storybook",
     "chromatic": "chromatic --project-token=ef4339fcb82b"
   },
-  "dependencies": {}
+  "dependencies": {
+    "commit": "^0.0.4"
+  }
 }
